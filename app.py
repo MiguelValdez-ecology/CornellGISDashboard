@@ -13,7 +13,8 @@ QGIS_MAP_FOLDER = "qgis2web"
 MAP_PATH = os.path.join(os.path.dirname(__file__), QGIS_MAP_FOLDER)
 
 # Path to your CSV file
-CSV_PATH = r"C:\Users\mvc20\Documents\Planificacion\Cornell_GIS_hub\ParcelasCarr186_COV\Tabla_Procesada\Procedencia_visitors.csv"
+CSV_PATH = os.path.join(os.path.dirname(__file__), "Procedencia_visitors.csv")
+
 
 # Load the CSV data
 df = pd.read_csv(CSV_PATH)
