@@ -59,5 +59,7 @@ app.layout = html.Div([
 def serve_qgis_webmap(filename):
     return send_from_directory(MAP_PATH, filename)
 
+# click to open in render
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(host="0.0.0.0", port=port, debug=True)
